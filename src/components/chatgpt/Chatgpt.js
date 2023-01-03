@@ -5,7 +5,7 @@ import { ScaleLoader } from 'react-spinners'
 import "./Chatgpt.css"
 const Chatgpt = () => {
     const configuration = new Configuration({
-        apiKey : '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'
+        apiKey : process.env.REACT_APP_API
     })
     const openai = new OpenAIApi(configuration)
     const [loading, setLoading] = useState(false)
